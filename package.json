@@ -1,0 +1,5 @@
+{
+  "name": "deploy_rails_capistrano",
+  "private": true,
+  "dependencies": {}
+}
