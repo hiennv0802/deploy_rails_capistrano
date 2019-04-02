@@ -59,7 +59,7 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
-set :user, "root"
+set :user, "ubuntu"
 set :deploy_via, :remote_cache
 set :conditionally_migrate, true
 set :rails_env, "staging"
