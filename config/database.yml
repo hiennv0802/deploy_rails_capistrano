@@ -17,3 +17,9 @@ production:
   database: deploy_rails_capistrano_production
   username: deploy_rails_capistrano
   password: <%= ENV['DATABASE_PASSWORD'] %>
+
+staging:
+  <<: *default
+  database: deploy_rails_capistrano_staging
+  username: deploy_rails_capistrano
+  password: <%= ENV['DATABASE_PASSWORD'] %>
