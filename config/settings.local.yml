@@ -1,0 +1,6 @@
+config:
+  mailer:
+    host: "framgia.local"
+    default_from: "nguyen.van.hien@framgia.com"
+    support_email:
+      owner: "support@lawsonstaff.co.jp"
