@@ -34,3 +34,9 @@
 config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
+
+# ignore database config it will base on owner development
+config/database.yml
+
+# ignore database config it will base on each environment
+config/secrets.yml
