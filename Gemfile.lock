@@ -64,9 +64,16 @@ GEM
     capistrano-rails (1.4.0)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
+    capistrano-resque (0.2.3)
+      capistrano
+      resque
+      resque-scheduler
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
+    capistrano-sidekiq (1.0.2)
+      capistrano (>= 3.9.0)
+      sidekiq (>= 3.4)
     capistrano3-unicorn (0.2.1)
       capistrano (~> 3.1, >= 3.1.0)
     capybara (3.16.0)
@@ -338,8 +345,11 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   capistrano
+  capistrano-bundler
   capistrano-rails
+  capistrano-resque
   capistrano-rvm
+  capistrano-sidekiq
   capistrano3-unicorn
   capybara (>= 2.15)
   chatwork

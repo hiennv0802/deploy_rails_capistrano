@@ -11,6 +11,9 @@ set :bundle_binstubs, nil
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/var/www/html/#{fetch(:application)}"
 
+set :workers, "*" => 3
+set :resque_environment_task, true
+set :resque_log_file, "log/resque.log"
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
@@ -41,6 +44,8 @@ set :keep_releases, 5
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 after "deploy:publishing", "deploy:restart"
+after "deploy:restart", "resque:restart"
+after "deploy:restart", "resque:scheduler:restart"
 namespace :deploy do
   task :restart do
     invoke "unicorn:restart"

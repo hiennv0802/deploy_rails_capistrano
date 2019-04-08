@@ -63,5 +63,6 @@ set :user, "ubuntu"
 set :deploy_via, :remote_cache
 set :conditionally_migrate, true
 set :rails_env, "staging"
+set :sidekiq_processes, 1
 
-server "54.169.33.180", user: fetch(:user), port: fetch(:port), roles: %w(web app db)
+server "54.169.33.180", user: fetch(:user), port: fetch(:port), roles: %w(web app db resque_worker resque_scheduler)

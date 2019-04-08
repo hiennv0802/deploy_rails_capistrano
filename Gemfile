@@ -27,9 +27,12 @@ gem "sidekiq-status"
 
 # Deploy
 gem "capistrano"
+gem "capistrano-bundler"
 gem "capistrano-rails"
 gem "capistrano3-unicorn"
 gem "unicorn"
+gem "capistrano-resque", require: false
+gem "capistrano-sidekiq"
 gem "capistrano-rvm"
 
 # Support
