@@ -1,0 +1,3 @@
+ChatworkSendNotification:
+  cron: "0,30 * * * *"
+  description: Send message after 30 minutes
